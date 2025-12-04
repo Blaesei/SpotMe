@@ -3,53 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpotBro - AI Fitness Form Coach</title>
+    <title>SpotBro - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-50">
 
-    <!-- Login Page -->
-    <div id="loginPage" class="min-h-screen gradient-bg flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-md p-8">
-            <div class="text-center mb-8">
-                <div class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 p-4 rounded-2xl mb-4">
-                    <svg class="icon-lg text-white" viewBox="0 0 24 24">
-                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                    </svg>
-                </div>
-                <h1 class="text-4xl font-bold text-gray-900 mb-2">SpotBro</h1>
-                <p class="text-gray-600">Your AI-powered fitness form coach</p>
-            </div>
-
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <input type="email" placeholder="you@example.com" 
-                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Password</label>
-                    <input type="password" placeholder="••••••••" 
-                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition">
-                </div>
-
-                <button onclick="login()" class="btn w-full gradient-button text-white py-3 rounded-xl font-semibold">
-                    Sign In
-                </button>
-
-                <div class="text-center">
-                    <button class="text-sm text-gray-600 hover:text-gray-900">
-                        Don't have an account? <span class="text-blue-600 font-semibold">Sign up</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Navigation -->
-    <nav id="navigation" class="hidden bg-white border-b border-gray-200 px-6 py-4">
+    <nav class="bg-white border-b border-gray-200 px-6 py-4">
         <div class="flex items-center justify-between max-w-7xl mx-auto">
             <div class="flex items-center space-x-2">
                 <svg class="icon text-blue-600" style="width: 32px; height: 32px;" viewBox="0 0 24 24">
@@ -58,14 +20,14 @@
                 <span class="text-2xl font-bold text-gray-900">SpotBro</span>
             </div>
             <div class="flex items-center space-x-6">
-                <button onclick="showPage('dashboard')" class="nav-item flex items-center space-x-2 px-4 py-2 rounded-lg" id="navDashboard">
+                <a href="home.html" class="nav-item active flex items-center space-x-2 px-4 py-2 rounded-lg">
                     <svg class="icon" viewBox="0 0 24 24">
                         <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                         <polyline points="9 22 9 12 15 12 15 22"></polyline>
                     </svg>
                     <span class="font-medium">Home</span>
-                </button>
-                <button onclick="showPage('library')" class="nav-item flex items-center space-x-2 px-4 py-2 rounded-lg" id="navLibrary">
+                </a>
+                <a href="exercises.html" class="nav-item flex items-center space-x-2 px-4 py-2 rounded-lg">
                     <svg class="icon" viewBox="0 0 24 24">
                         <path d="m6.5 6.5 11 11"></path>
                         <path d="m21 21-1-1"></path>
@@ -73,27 +35,27 @@
                         <circle cx="10.5" cy="10.5" r="7.5"></circle>
                     </svg>
                     <span class="font-medium">Exercises</span>
-                </button>
-                <button onclick="showPage('progress')" class="nav-item flex items-center space-x-2 px-4 py-2 rounded-lg" id="navProgress">
+                </a>
+                <a href="progress.html" class="nav-item flex items-center space-x-2 px-4 py-2 rounded-lg">
                     <svg class="icon" viewBox="0 0 24 24">
                         <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
                         <polyline points="16 7 22 7 22 13"></polyline>
                     </svg>
                     <span class="font-medium">Progress</span>
-                </button>
-                <button onclick="logout()" class="nav-item flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50">
+                </a>
+                <a href="login.html" class="nav-item flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50">
                     <svg class="icon" viewBox="0 0 24 24">
                         <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
                         <polyline points="16 17 21 12 16 7"></polyline>
                         <line x1="21" x2="9" y1="12" y2="12"></line>
                     </svg>
-                </button>
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- Dashboard Page -->
-    <div id="dashboardPage" class="hidden min-h-screen bg-gray-50">
+    <div class="min-h-screen bg-gray-50">
         <div class="max-w-7xl mx-auto p-6">
             <div class="mb-8">
                 <h1 class="text-3xl font-bold text-gray-900 mb-2">Welcome back, Andrea!</h1>
@@ -144,45 +106,20 @@
             <!-- Quick Start -->
             <div class="bg-white rounded-2xl p-8 shadow-sm mb-8">
                 <h2 class="text-2xl font-bold text-gray-900 mb-6">Quick Start</h2>
-                <button onclick="showPage('library')" class="btn w-full gradient-button text-white py-4 rounded-xl font-semibold text-lg flex items-center justify-center space-x-2">
+                <a href="exercises.html" class="btn w-full gradient-button text-white py-4 rounded-xl font-semibold text-lg flex items-center justify-center space-x-2">
                     <svg class="icon" viewBox="0 0 24 24">
                         <circle cx="12" cy="12" r="10"></circle>
                         <polygon points="10 8 16 12 10 16 10 8"></polygon>
                     </svg>
                     <span>Start New Workout</span>
-                </button>
+                </a>
             </div>
 
             <!-- Recent Workouts -->
             <div class="bg-white rounded-2xl p-8 shadow-sm">
-                <h2 class="text-2xl font-bold text-gray-900 mb-6">Recent Workouts</h2>
+                <h2 class="text-xl font-bold text-gray-900 mb-6">Recent Workouts</h2>
                 <div class="space-y-4" id="recentWorkouts"></div>
             </div>
-        </div>
-    </div>
-
-    <!-- Exercise Library Page -->
-    <div id="libraryPage" class="hidden min-h-screen bg-gray-50">
-        <div class="max-w-7xl mx-auto p-6">
-            <div class="mb-8">
-                <h1 class="text-3xl font-bold text-gray-900 mb-2">Exercise Library</h1>
-                <p class="text-gray-600">Choose an exercise to get started</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="exerciseGrid"></div>
-        </div>
-    </div>
-
-    <!-- Exercise Detail Page -->
-    <div id="detailPage" class="hidden min-h-screen bg-gray-50">
-        <div class="max-w-4xl mx-auto p-6">
-            <button onclick="showPage('library')" class="mb-6 text-gray-600 hover:text-gray-900 flex items-center space-x-2">
-                <svg class="icon" viewBox="0 0 24 24" style="transform: rotate(180deg);">
-                    <path d="m9 18 6-6-6-6"></path>
-                </svg>
-                <span>Back to Library</span>
-            </button>
-
-            <div class="bg-white rounded-2xl p-8 shadow-sm mb-6" id="exerciseDetail"></div>
         </div>
     </div>
 
@@ -191,7 +128,7 @@
         <div class="max-w-4xl mx-auto p-6">
             <div class="bg-white rounded-2xl p-8 shadow-sm">
                 <h1 class="text-3xl font-bold text-gray-900 mb-6 text-center">Camera Setup</h1>
-                
+
                 <div class="bg-gray-900 rounded-2xl aspect-video mb-6 flex items-center justify-center relative overflow-hidden">
                     <svg class="icon" style="width: 96px; height: 96px; color: #4b5563;" viewBox="0 0 24 24">
                         <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
@@ -305,47 +242,23 @@
                 </div>
 
                 <div class="flex space-x-4">
-                    <button onclick="showPage('progress')" class="btn flex-1 bg-gray-100 text-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-200">
+                    <a href="progress.html" class="btn flex-1 bg-gray-100 text-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-200">
                         View Progress
-                    </button>
-                    <button onclick="showPage('dashboard')" class="btn flex-1 gradient-button text-white py-3 rounded-xl font-semibold">
+                    </a>
+                    <a href="home.html" class="btn flex-1 gradient-button text-white py-3 rounded-xl font-semibold">
                         Back to Home
-                    </button>
+                    </a>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Progress Dashboard Page -->
-    <div id="progressPage" class="hidden min-h-screen bg-gray-50">
-        <div class="max-w-7xl mx-auto p-6">
-            <div class="mb-8">
-                <h1 class="text-3xl font-bold text-gray-900 mb-2">Your Progress</h1>
-                <p class="text-gray-600">Track your improvement over time</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-                <!-- Form Score Trend -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm">
-                    <h2 class="text-xl font-bold text-gray-900 mb-6">Form Score Trend</h2>
-                    <div class="h-64 flex items-end justify-between space-x-2" id="formScoreChart"></div>
-                </div>
-
-                <!-- Workout Frequency -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm">
-                    <h2 class="text-xl font-bold text-gray-900 mb-6">Weekly Workouts</h2>
-                    <div class="h-64 flex items-end justify-between space-x-2" id="workoutFrequencyChart"></div>
-                </div>
-            </div>
-
-            <!-- Exercise Breakdown -->
-            <div class="bg-white rounded-2xl p-8 shadow-sm">
-                <h2 class="text-xl font-bold text-gray-900 mb-6">Exercise Breakdown</h2>
-                <div class="space-y-4" id="exerciseBreakdown"></div>
             </div>
         </div>
     </div>
 
     <script src="app.js"></script>
+    <script>
+        // Load dashboard content on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadDashboard();
+        });
+    </script>
 </body>
 </html>

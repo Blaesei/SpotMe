@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotBro - AI Fitness Form Coach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Login Page -->
+    <div class="min-h-screen gradient-bg flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-md p-8">
+            <div class="text-center mb-8">
+                <div class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 p-4 rounded-2xl mb-4">
+                    <svg class="icon-lg text-white" viewBox="0 0 24 24">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </div>
+                <h1 class="text-4xl font-bold text-gray-900 mb-2">SpotBro</h1>
+                <p class="text-gray-600">Your AI-powered fitness form coach</p>
+            </div>
+
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <input type="email" placeholder="you@example.com"
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+                    <input type="password" placeholder="••••••••"
+                        class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition">
+                </div>
+
+                <button onclick="window.location.href='home.html'" class="btn w-full gradient-button text-white py-3 rounded-xl font-semibold">
+                    Sign In
+                </button>
+
+                <div class="text-center">
+                    <button class="text-sm text-gray-600 hover:text-gray-900">
+                        Don't have an account? <span class="text-blue-600 font-semibold">Sign up</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
