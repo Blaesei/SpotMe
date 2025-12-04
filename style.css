@@ -395,6 +395,156 @@ input:focus-visible {
     } */
 }
 
+/* ====================== LOGIN PAGE ====================== */
+.login-body {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('images/login_bg.jpg')
+              center center / cover no-repeat fixed;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container */
+.login-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Modern Glass Card */
+.login-card {
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(12px);
+  padding: 3rem 2.2rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Logo / Title */
+.login-logo img {
+  height: 80px;           /* bigger logo on login page */
+  margin-bottom: 1.5rem;
+}
+
+.login-title {
+  margin-bottom: 2rem;
+  color: #f1f1f1;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+/* Form */
+.login-form {
+  text-align: left;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 1.4rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: .4rem;
+  font-weight: 600;
+  color: #eaeaea;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  backdrop-filter: blur(4px);
+  transition: 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 1rem !important;
+  margin-top: 0.7rem;
+  border-radius: 10px;
+  border: none;
+  background: #F6AE2D;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #d18800;
+  transform: translateY(-2px);
+}
+
+/* Signup Link */
+.login-signup {
+  margin-top: 1.4rem;
+  color: #dddddd;
+  font-size: 0.95rem;
+}
+
+.login-signup a {               /*sign up button*/
+  color: #F6AE2D;
+  font-weight: 600;
+}
+
+/* Back Link */
+.login-back {
+  margin-top: 2rem;
+}
+
+.login-back a {
+  color: #fff;
+  font-size: 0.92rem;
+  opacity: 0.8;
+}
+
+.login-back a:hover {
+  opacity: 1;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .login-card {
+    padding: 2.5rem 1.7rem;
+  }
+  .login-logo {
+    font-size: 2.2rem;
+  }
+}
+/* ====================== IMAGE LOGO ====================== */
+.logo-image img {
+  height: 50px;           /* adjust this value to make your logo bigger/smaller */
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 /* ==========================================
    CUSTOM UTILITIES
    ========================================== */
