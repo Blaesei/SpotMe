@@ -29,32 +29,44 @@ function login() {
 }
 
 function logout() {
-    // Hide all pages
+    // Hide all pages that exist
     const pages = ['dashboardPage', 'libraryPage', 'detailPage', 'cameraSetupPage', 'workoutActivePage', 'summaryPage', 'progressPage'];
     pages.forEach(page => {
-        document.getElementById(page).classList.add('hidden');
+        const element = document.getElementById(page);
+        if (element) {
+            element.classList.add('hidden');
+        }
     });
-    
-    // Hide navigation
-    document.getElementById('navigation').classList.add('hidden');
-    
-    // Show login page
-    document.getElementById('loginPage').classList.remove('hidden');
+
+    // Hide navigation if it exists
+    const navigation = document.getElementById('navigation');
+    if (navigation) {
+        navigation.classList.add('hidden');
+    }
+
+    // Show login page if it exists
+    const loginPage = document.getElementById('loginPage');
+    if (loginPage) {
+        loginPage.classList.remove('hidden');
+    }
 }
 
 // Page Navigation
 function showPage(pageName) {
-    // Hide all pages
+    // Hide all pages that exist in the current document
     const pages = ['dashboardPage', 'libraryPage', 'detailPage', 'cameraSetupPage', 'workoutActivePage', 'summaryPage', 'progressPage'];
     pages.forEach(page => {
-        document.getElementById(page).classList.add('hidden');
+        const element = document.getElementById(page);
+        if (element) {
+            element.classList.add('hidden');
+        }
     });
-    
+
     // Remove active class from all nav items
     document.querySelectorAll('.nav-item').forEach(item => {
         item.classList.remove('active');
     });
-    
+
     // Show selected page
     const pageMap = {
         'dashboard': 'dashboardPage',
@@ -65,18 +77,24 @@ function showPage(pageName) {
         'summary': 'summaryPage',
         'progress': 'progressPage'
     };
-    
-    document.getElementById(pageMap[pageName]).classList.remove('hidden');
-    
+
+    const targetPage = document.getElementById(pageMap[pageName]);
+    if (targetPage) {
+        targetPage.classList.remove('hidden');
+    }
+
     // Set active nav item
     if (pageName === 'dashboard') {
-        document.getElementById('navDashboard').classList.add('active');
+        const navDashboard = document.getElementById('navDashboard');
+        if (navDashboard) navDashboard.classList.add('active');
     } else if (pageName === 'library') {
-        document.getElementById('navLibrary').classList.add('active');
+        const navLibrary = document.getElementById('navLibrary');
+        if (navLibrary) navLibrary.classList.add('active');
     } else if (pageName === 'progress') {
-        document.getElementById('navProgress').classList.add('active');
+        const navProgress = document.getElementById('navProgress');
+        if (navProgress) navProgress.classList.add('active');
     }
-    
+
     // Load page content
     if (pageName === 'dashboard') {
         loadDashboard();
@@ -158,7 +176,7 @@ function loadExerciseLibrary() {
 
 function selectExercise(exerciseId) {
     selectedExercise = exercises.find(ex => ex.id === exerciseId);
-    window.location.href = 'exercise_details.html';
+    showPage('detail');
 }
 
 // Exercise Detail
