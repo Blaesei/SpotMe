@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotBro - Workout Summary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 px-6 py-4">
+        <div class="flex items-center justify-between max-w-7xl mx-auto">
+            <div class="flex items-center space-x-2">
+                <img src="images/logo.png" alt="SpotBro Logo" class="h-12">
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="home.html" class="nav-item flex items-center space-x-2 px-4 py-2 rounded-lg">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span class="font-medium">Home</span>
+                </a>
+                <a href="exercises.html" class="nav-item flex items-center space-x-2 px-4 py-2 rounded-lg">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="m6.5 6.5 11 11"></path>
+                        <path d="m21 21-1-1"></path>
+                        <path d="m3 21 9-9"></path>
+                        <circle cx="10.5" cy="10.5" r="7.5"></circle>
+                    </svg>
+                    <span class="font-medium">Exercises</span>
+                </a>
+                <a href="progress.html" class="nav-item active flex items-center space-x-2 px-4 py-2 rounded-lg">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                        <polyline points="16 7 22 7 22 13"></polyline>
+                    </svg>
+                    <span class="font-medium">Progress</span>
+                </a>
+                <a href="login.html" class="nav-item flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" x2="9" y1="12" y2="12"></line>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Workout Summary Page -->
+    <div class="min-h-screen bg-gray-50">
+        <div class="max-w-4xl mx-auto p-6">
+            <div class="bg-white rounded-2xl p-8 shadow-sm text-center">
+                <div class="text-6xl mb-4">🎉</div>
+                <h1 class="text-3xl font-bold text-gray-900 mb-2">Workout Complete!</h1>
+                <p class="text-gray-600 mb-8">Great job on your session</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-blue-50 rounded-xl p-6">
+                        <p class="text-blue-600 font-semibold mb-2">Reps Completed</p>
+                        <p class="text-4xl font-bold text-blue-700">12</p>
+                    </div>
+                    <div class="bg-purple-50 rounded-xl p-6">
+                        <p class="text-purple-600 font-semibold mb-2">Avg Form Score</p>
+                        <p class="text-4xl font-bold text-purple-700">87%</p>
+                    </div>
+                    <div class="bg-green-50 rounded-xl p-6">
+                        <p class="text-green-600 font-semibold mb-2">Duration</p>
+                        <p class="text-4xl font-bold text-green-700">2:45</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 mb-8 text-left">
+                    <h3 class="font-bold text-gray-900 mb-4">Rep Breakdown</h3>
+                    <div class="space-y-2" id="repBreakdown">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm">Rep 1</span>
+                            <div class="flex-1 mx-4 bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                            <span class="text-sm font-semibold text-green-600">95%</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm">Rep 2</span>
+                            <div class="flex-1 mx-4 bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 92%"></div>
+                            </div>
+                            <span class="text-sm font-semibold text-green-600">92%</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm">Rep 3</span>
+                            <div class="flex-1 mx-4 bg-gray-200 rounded-full h-2">
+                                <div class="bg-yellow-500 h-2 rounded-full" style="width: 78%"></div>
+                            </div>
+                            <span class="text-sm font-semibold text-yellow-600">78%</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm">Rep 4</span>
+                            <div class="flex-1 mx-4 bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 88%"></div>
+                            </div>
+                            <span class="text-sm font-semibold text-green-600">88%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex space-x-4">
+                    <a href="progress.html" class="btn flex-1 bg-gray-100 text-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-200">
+                        View Progress
+                    </a>
+                    <a href="home.html" class="btn flex-1 gradient-button text-white py-3 rounded-xl font-semibold">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

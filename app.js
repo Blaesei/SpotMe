@@ -158,7 +158,7 @@ function loadExerciseLibrary() {
 
 function selectExercise(exerciseId) {
     selectedExercise = exercises.find(ex => ex.id === exerciseId);
-    showPage('detail');
+    window.location.href = 'exercise_details.html';
 }
 
 // Exercise Detail
